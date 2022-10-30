@@ -25,7 +25,7 @@ function Cart() {
         <>
           <h1>{ c.name}</h1>
           <h1>{"price " +" => "+ c.price * c.quantity}</h1>
-          <p>{"quntity " + " => " + c.quantity}</p>
+          <p>{"quantity " + " => " + c.quantity}</p>
 
         </>
         )
