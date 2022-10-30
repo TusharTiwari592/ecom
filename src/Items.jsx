@@ -6,8 +6,8 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
 export const UserContext = createContext();
 
+console.log(UserContext)
 function Items({ items }) {
-
 
   const [cart, setCart] = useState([]);
 
@@ -51,8 +51,9 @@ function Items({ items }) {
 
 
   return (
-    <UserContext.Provider value={cart}>
+    
       <>
+      
       {items.map((detail, index) => {
         return (
           <div className="plant" key={index}>
@@ -69,10 +70,14 @@ function Items({ items }) {
               Add to cart
             </button>
           </div>
+
         );
       })}
+      <UserContext.Provider value ={cart}>
+      <Cart />
+      </UserContext.Provider>
     </>
-    </UserContext.Provider>
+    
   );
 }
 
